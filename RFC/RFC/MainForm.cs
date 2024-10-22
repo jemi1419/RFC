@@ -29,5 +29,17 @@ namespace RFC
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void RFCClick(object sender, EventArgs e)
+		{
+			string nom = txtn.Text.Substring(0, 1);
+			string app = txta1.Text.Substring(0, 2);
+			app = app.ToUpper();
+			string apm = txta2.Text.Substring(0, 1);
+			string an = txtf.Text.Substring(6, 2);
+			string ms = txtf.Text.Substring(3, 2);
+			string dd = txtf.Text.Substring(0,2);
+			MessageBox.Show("Su RFC es " + app + apm + nom + an + ms + dd);
+		}
 	}
 }
