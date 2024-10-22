@@ -32,13 +32,21 @@ namespace RFC
 		
 		void RFCClick(object sender, EventArgs e)
 		{
+			// se saca la primera letra del nombre
 			string nom = txtn.Text.Substring(0, 1);
+			// se saca las primeras dos letras del apellido
 			string app = txta1.Text.Substring(0, 2);
+			//se hacen mayusculas
 			app = app.ToUpper();
+			// se saca la primera letra del segundo apellido
 			string apm = txta2.Text.Substring(0, 1);
+			// se saca el año de nacimiento
 			string an = txtf.Text.Substring(6, 2);
+			// se saca el mes de nacimiento
 			string ms = txtf.Text.Substring(3, 2);
+			// se saca el dia de nacimiento
 			string dd = txtf.Text.Substring(0,2);
+			// se escribe el rfc
 			MessageBox.Show("Su RFC es " + app + apm + nom + an + ms + dd);
 		}
 	}
