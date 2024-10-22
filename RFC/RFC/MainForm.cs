@@ -36,8 +36,7 @@ namespace RFC
 			string nom = txtn.Text.Substring(0, 1);
 			// se saca las primeras dos letras del apellido
 			string app = txta1.Text.Substring(0, 2);
-			//se hacen mayusculas
-			app = app.ToUpper();
+			
 			// se saca la primera letra del segundo apellido
 			string apm = txta2.Text.Substring(0, 1);
 			// se saca el año de nacimiento
@@ -46,6 +45,11 @@ namespace RFC
 			string ms = txtf.Text.Substring(3, 2);
 			// se saca el dia de nacimiento
 			string dd = txtf.Text.Substring(0,2);
+			
+			//se hacen mayusculas
+			app = app.ToUpper();
+			nom = nom.ToUpper();
+			apm = apm.ToUpper();
 			// se escribe el rfc
 			MessageBox.Show("Su RFC es " + app + apm + nom + an + ms + dd);
 		}
